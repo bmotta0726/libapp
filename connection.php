@@ -14,14 +14,14 @@
         echo "Failed to connect to MySQL";
     }*/
 
-    $query_articulos = "SELECT id, nombre, unidadVenta, precio FROM articulo";
+    /*$query_articulos = "SELECT id, nombre, unidadVenta, precio FROM articulo";
     $query_categorias = "SELECT id, nombreCategoria FROM categoria";
     $query_articles_main = "SELECT id, nombre, unidadVenta, precio FROM articulo WHERE comun = '1'";
     
     $articulos_todos = mysqli_query($conn, $query_articulos);
     $categorias_todas = mysqli_query($conn, $query_categorias);
 
-    $articles_main = mysqli_query($conn, $query_articles_main)
+    $articles_main = mysqli_query($conn, $query_articles_main)*/
 
 
     /*if(mysqli_num_rows($result)>1){

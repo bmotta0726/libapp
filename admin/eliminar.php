@@ -1,14 +1,17 @@
 <?php
-    include('../connection.php');
+    require_once('../connection.php');
 
-    //$search_result = null;
+    $search_result = null;
 
     if (isset($_GET['search'])){
         $search = $_GET['search'];
-        $select_query = "SELECT id, nombre, unidadVenta, precio FROM articulo WHERE id = '$search'";
-        $search_result = mysqli_query($conn, $select_query);
+        $article_id = $search;
+        $select_query = "SELECT id, nombre, unidadVenta, precio FROM articulo WHERE id = '$article_id'";
+        $search_result = mysqli_query($conn, $select_query);        
 
         $delete_query = "DELETE FROM articulo WHERE id = '$article_id'";
+    }else{
+        $article_id = null;
     }    
 ?>
 
@@ -38,10 +41,10 @@
             </a>
         </form>                
     </div><br><br>
+
     <?php
         if (mysqli_num_rows($search_result)>0){
-            $row = mysqli_fetch_assoc($search_result);
-            ?>
+    ?>                        
             <table class="mainTable">
                 <thead>
                     <tr>
@@ -52,6 +55,8 @@
                     </tr>
                 </thead>
                 <tbody>
+                <?php $row = mysqli_fetch_assoc($search_result);
+                ?>
                     <tr>
                         <td><?php echo $row['id'] ?></td>
                         <td><?php echo $row['nombre'] ?></td>
@@ -64,6 +69,8 @@
                 <input class="button-main-style button-delete" type="submit" name="submit" value="Eliminar">
             </div>            
             <?php                
+        }else{
+            echo "<h2>SIN RESULTADOS</h2>";
         }
     ?>
 </body>

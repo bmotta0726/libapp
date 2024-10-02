@@ -129,7 +129,7 @@ tbody tr:nth-child(even) {
     justify-content: center;
 }
 
-.auth-buttons button, .button-main-style {
+.auth-buttons button, .button-main-style, .button-back {
     background-color: #0078d0;
     border: 0;
     border-radius: 56px;

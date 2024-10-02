@@ -16,6 +16,11 @@
         <a href="admin/modificar.php"><button class="modify-button">Modificar productos</button></a>
         <a href="admin/eliminar.php"><button class="button-delete">Eliminar productos</button></a><br><br>
         <a href="admin/estadisticas.php"><button class="button-stats">Ver estadísticas</button></a>
+    </div><br><br>
+    <div>
+        <a href="index.php">
+            <button class="button-main-style">Volver</button>
+        </a>
     </div>
 </body>
 </html>
