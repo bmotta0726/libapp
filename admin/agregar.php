@@ -6,7 +6,7 @@
         $costo = $_POST['form-costo'];
         $precio =  $_POST['form-precio'];
         $unidadVenta = $_POST['form-unidad'];
-        $nombreAlt = $_POST['form-alt'];
+        $nombreAlt = $_POST['form-namealt'];
         $size = $_POST['form-tam'];
         $material = $_POST['form-mat'];
         $color = $_POST['form-col'];
@@ -24,11 +24,6 @@
             echo "<script>alert('ERROR. Producto NO registrado')</script>";
         }
 
-        /*if ($conn->query($insert_query) === TRUE){
-            echo "<script>Se registró nuevo producto</script>";
-        }else{
-            echo "Error. No se agregó producto";
-        }*/
     }
 
     $conn->close();
@@ -52,7 +47,7 @@
     </header><br><br> 
     <main>
         <div class="div-form">
-            <form action="agregar.php" class="form-agregar" method="POST" autocomplete="off">
+            <form method="POST" action="agregar.php" class="form-agregar" autocomplete="off">
                 <div class="div-form-field">
                     <label for="form-nombre">Nombre: </label>
                     <input type="text" id="form-nombre" name="form-nombre" required>
@@ -72,8 +67,8 @@
                 <br>
                 <br>
                 <div class="div-form-field">
-                    <label for="form-alt">Nombre alterno: </label>
-                    <input type="text" id="form-alt" name="form-alt">
+                    <label for="form-namealt">Nombre alterno: </label>
+                    <input type="text" id="form-namealt" name="form-namealt">
                 </div>
                 <div class="div-form-field">
                     <label for="form-tam">Tamaño: </label>
@@ -102,7 +97,9 @@
         </div>        
     </main>
     <footer>
-        <a href="../autorizado.php"><button type="button" class="button-main-style">Volver</button></a>
+        <a href="../autorizado.php">
+            <button type="button" class="button-main-style">Volver</button>
+        </a>
     </footer>
 </body>
 </html>

@@ -1,7 +1,8 @@
 <?php
     require_once('../connection.php');
 
-    $search_result = null;
+    $search_result = 0;
+    $delete_query = "";
 
     if (isset($_GET['search'])){
         $search = $_GET['search'];
@@ -12,7 +13,21 @@
         $delete_query = "DELETE FROM articulo WHERE id = '$article_id'";
     }else{
         $article_id = null;
-    }    
+    }
+
+    if (isset($_POST['submit'])){
+        //$submit = $_POST['submit'];
+
+        if ($delete_query != ""){
+            $delete = mysqli_query($conn, $delete_query);
+        }
+
+        if($delete){
+            echo "<script>alert('Se eliminó producto')</script>";
+        }else{
+            echo "<script>alert('ERROR. Producto NO pudo ser eliminado')</script>";
+        }
+    }
 ?>
 
 <!DOCTYPE html>
@@ -43,7 +58,9 @@
     </div><br><br>
 
     <?php
-        if (mysqli_num_rows($search_result)>0){
+        if ($search_result instanceof mysqli_result){
+            if (mysqli_num_rows($search_result)>0){
+        //if ($search_result != 0){
     ?>                        
             <table class="mainTable">
                 <thead>
@@ -65,13 +82,14 @@
                     </tr>
                 </tbody>            
             </table>
-            <div>
+            <form method="POST">
                 <input class="button-main-style button-delete" type="submit" name="submit" value="Eliminar">
-            </div>            
+            </form>            
             <?php                
         }else{
             echo "<h2>SIN RESULTADOS</h2>";
         }
+    }
     ?>
 </body>
 </html>

@@ -188,21 +188,21 @@ tbody tr:nth-child(even) {
     border-radius: 20px;
 }
 
-.form-agregar {
+.form-agregar, .form-modificar {
     padding: 20px 10px;
     justify-content: center;
 }
 
-.form-agregar div {
+.form-agregar, .form-modificar div {
     padding: 10px 25px;
 }
 
-.form-agregar label {
+.form-agregar, .form-modificar label {
     font-size: 32px;
     font-family: Tahoma, 'Segoe UI', Geneva, Verdana, sans-serif;
 }
 
-.form-agregar input {
+.form-agregar, .form-modificar input {
     height: 30px;
     width: 400px;
 }
