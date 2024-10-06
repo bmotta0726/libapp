@@ -11,14 +11,12 @@
     
 ?>
 
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/style.css">
-    <title>Modificar datos de producto</title>
-</head>
+<?php
+    $title = 'Modificar | ';
+    $csslocator = '../';
+    include_once('../header.php');    
+?>
+
 <body>
     <header class="header-principal">
         <a href="../index.php">
@@ -60,7 +58,7 @@
                                 <td><?php echo $row['nombre'] ?></td>
                                 <td><?php echo $row['unidadVenta'] ?></td>
                                 <td><?php echo $row['precio'] ?></td>  
-                                <td><a href="modificar_producto.php?id=<?php echo $row['id']?>"><button>Cambiar</button></a></td>
+                                <td><a href="modificar_producto.php?id=<?php echo $row['id']?>"><button class="cambiar-button">Cambiar</button></a></td>
                             </tr>      
                         <?php
                         } 
@@ -73,6 +71,13 @@
                 }
             }
         ?>
-    </main>
+    </main><br>
+
+    <div id="button-volver-container">
+        <a href="../autorizado.php">
+            <button class="button-main-style">Volver</button>
+        </a>
+    </div>
+
 </body>
 </html>

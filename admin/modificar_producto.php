@@ -48,14 +48,12 @@
     }
 ?>
 
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/style.css">
-    <title>Modificar</title>
-</head>
+<?php
+    $title = 'Modificar | ';
+    $csslocator = '../';
+    include_once('../header.php');    
+?>
+
 <body>
     <header class="header-principal">
         <a href="../index.php">
@@ -66,7 +64,8 @@
     </header><br><br>
     <main>
         <div class="div-form">
-            <form method="POST" action="modificar_producto.php?idd=<?php echo $id?>" class="form-modificar" autocomplete="off">
+            <form method="POST" action="modificar_producto.php?idd=<?php echo $id?>" class="formAutorizado" autocomplete="off" id="form-modificar">
+                <h2>Cambiar datos del artículo</h2>
                 <div class="form-field">
                     <label for="nombre">Nombre: </label>
                     <input type="text" name="form-nombre" value="<?php echo $row['nombre']?>">
@@ -108,8 +107,8 @@
                     <input type="text" name="form-diseno" value="<?php echo $row['diseno']?>">
                 </div>
                 <br>
-                <div>
-                    <input class="button-main-style" type="submit" name="submit" value="Modificar">
+                <div class="form-input-button-container">
+                    <input class="form-input-button" type="submit" name="submit" value="Modificar">
                 </div>
             </form>
         </div>        

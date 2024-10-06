@@ -1,3 +1,9 @@
+<?php
+    $title = 'Estadísticas | ';
+    $csslocator = '../';
+    include_once('../header.php');
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>

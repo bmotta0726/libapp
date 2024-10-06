@@ -49,8 +49,10 @@
         }
         ?>
     </main>
-    <footer>
-        <a href="../estadisticas.php"><button type="button" class="button-main-style">Volver</button></a>
-    </footer>
+    <div id="button-volver-container">
+        <a href="../estadisticas.php">
+            <button class="button-main-style">Volver</button>
+        </a>
+    </div>
 </body>
 </html>

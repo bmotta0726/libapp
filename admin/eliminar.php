@@ -30,14 +30,12 @@
     }
 ?>
 
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/style.css">
-    <title>Eliminar producto | Librería Motta</title>
-</head>
+<?php 
+    $title = 'Eliminar artículo | ';
+    $csslocator = '../';
+    include_once('../header.php');
+?>
+
 <body>
     <header class="header-principal">
         <a href="../index.php">
@@ -83,7 +81,9 @@
                 </tbody>            
             </table>
             <form method="POST">
-                <input class="button-main-style button-delete" type="submit" name="submit" value="Eliminar">
+                <div class="form-input-button-container">
+                    <input class="button-main-style" id="delete-button" type="submit" name="submit" value="Eliminar">
+                </div>                
             </form>            
             <?php                
         }else{
@@ -91,5 +91,12 @@
         }
     }
     ?>
+
+    <div id="button-volver-container">
+        <a href="../autorizado.php">
+            <button class="button-main-style">Volver</button>
+        </a>
+    </div>
+
 </body>
 </html>

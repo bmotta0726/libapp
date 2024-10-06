@@ -29,14 +29,11 @@
     $conn->close();
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/style.css">
-    <title>Agregar un producto</title>
-</head>
+<?php 
+    $title = "Agregar | ";
+    $csslocator = "../";
+    include_once('../header.php');
+?>
 <body>
     <header class="header-principal">
         <a href="../index.php">
@@ -47,7 +44,8 @@
     </header><br><br> 
     <main>
         <div class="div-form">
-            <form method="POST" action="agregar.php" class="form-agregar" autocomplete="off">
+            <form method="POST" action="agregar.php" class="formAutorizado" autocomplete="off" id="form-agregar">
+                <h2>Escribir datos</h2>
                 <div class="div-form-field">
                     <label for="form-nombre">Nombre: </label>
                     <input type="text" id="form-nombre" name="form-nombre" required>
@@ -90,8 +88,8 @@
                     <label for="form-dis">Diseño: </label>
                     <input type="text" id="form-dis" name="form-dis">
                 </div>
-                <div>
-                    <input class="button-main-style div-form-submit" type="submit" name="submit" value="Agregar">
+                <div class="form-input-button-container">
+                    <input class="form-input-button" type="submit" name="submit" value="Agregar">
                 </div>
             </form>
         </div>        

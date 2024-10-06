@@ -11,11 +11,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../css/style.css">
-    <title>Productos con más margen</title>
+    <title>Marcas | Librería Motta</title>
 </head>
 <body>
     <header>
-        <h2>PRODUCTOS CON MÁS MARGEN</h2>
+        <h2>MARCAS MÁS COMUNES</h2>
     </header>
     <main>
         <?php
@@ -45,8 +45,10 @@
         }
         ?>
     </main>
-    <footer>
-        <a href="../estadisticas.php"><button type="button" class="button-main-style">Volver</button></a>
-    </footer>
+    <div id="button-volver-container">
+        <a href="../estadisticas.php">
+            <button class="button-main-style">Volver</button>
+        </a>
+    </div>
 </body>
 </html>

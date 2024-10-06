@@ -1,16 +1,6 @@
 <?php
         require_once('connection.php');
 
-        #$search_query = "SELECT id, nombre, precio FROM articulo";
-        #$search_query = $query_articles_main;
-
-        #$query_articles = "SELECT id, nombre, unidadVenta, precio FROM articulo";
-        #$query_categories = "SELECT id, nombreCategoria FROM categoria";
-        #$query_articles_main = "SELECT id, nombre, unidadVenta, precio FROM articulo WHERE comun = '1'";
-    
-        #$articulos_todos = mysqli_query($conn, $query_articles);
-        #$categorias_todas = mysqli_query($conn, $query_categories);
-
         $query_articles_main = "SELECT id, nombre, unidadVenta, precio FROM articulo WHERE comun = '1'";
         $articles_main = mysqli_query($conn, $query_articles_main);
 
@@ -24,14 +14,11 @@
         $search_result = mysqli_query($conn, $search_query);
 ?>
 
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
-    <title>Precios | Librería Motta</title>
-</head>
+<?php 
+    $title = 'Consulta | ';
+    $csslocator = '';
+    include_once('header.php'); 
+?>
 <body>
     <header class="header-principal">
         <a href="index.php">
