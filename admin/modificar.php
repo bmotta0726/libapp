@@ -40,14 +40,14 @@
             if($search_result instanceof mysqli_result){
                 if(mysqli_num_rows($search_result)>0){
                     ?>
-                    <table class="mainTable">
+                    <table class="table-standard">
                         <thead>
                             <tr>
-                                <td>ID</td>
-                                <td>Nombre</td>
-                                <td>Unidad</td>
-                                <td>Precio</td>
-                                <td>Cambiar</td>
+                                <th>ID</th>
+                                <th>Nombre</th>
+                                <th>Unidad</th>
+                                <th>Precio</th>
+                                <th>Cambiar</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -71,13 +71,11 @@
                 }
             }
         ?>
-    </main><br>
-
-    <div id="button-volver-container">
-        <a href="../autorizado.php">
-            <button class="button-main-style">Volver</button>
-        </a>
-    </div>
+    </main>
+    <?php
+        $route = '../autorizado.php';
+        include_once('../footer.php');
+    ?>
 
 </body>
 </html>

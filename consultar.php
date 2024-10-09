@@ -9,7 +9,8 @@
 
         if (isset($_GET['search'])){
             $search = $_GET['search'];
-            $search_query = "SELECT id, nombre, unidadVenta, precio FROM articulo WHERE nombre LIKE '%$search%'";
+            //$search_query = "SELECT id, nombre, unidadVenta, precio FROM articulo WHERE nombre LIKE '%$search%'";
+            $search_query = "SELECT * FROM articulo WHERE nombre LIKE '%$search%'";
         }
         $search_result = mysqli_query($conn, $search_query);
 ?>
@@ -42,13 +43,14 @@
         <?php
         if (mysqli_num_rows($search_result)>0){
         ?>
-            <table class="mainTable">
+            <table class="table-standard">
                 <thead>
                     <tr>
                         <th>ID</th>
                         <th>Nombre</th>
                         <th>Unidad</th>
                         <th>Precio</th>
+                        <th>Detalles</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -59,6 +61,7 @@
                         <td><?php echo $row['nombre'] ?></td>
                         <td><?php echo $row['unidadVenta'] ?></td>
                         <td class="td-price"><?php echo $row['precio'] ?></td>
+                        <td><a href="producto.php?id=<?php echo $row['id']?>"><button class="detalles-button">Ver</button></a></td>
                     </tr>
                 <?php
                 }
@@ -70,6 +73,10 @@
             echo "<h2>SIN RESULTADOS</h2>";
         }
         ?>
-    </main>
+    </main>    
+    <?php 
+        $route = 'index.php';
+        include_once('footer.php'); 
+    ?>
 </body>
 </html>

@@ -60,7 +60,7 @@
             if (mysqli_num_rows($search_result)>0){
         //if ($search_result != 0){
     ?>                        
-            <table class="mainTable">
+            <table class="table-standard">
                 <thead>
                     <tr>
                         <th>ID</th>
@@ -91,12 +91,9 @@
         }
     }
     ?>
-
-    <div id="button-volver-container">
-        <a href="../autorizado.php">
-            <button class="button-main-style">Volver</button>
-        </a>
-    </div>
-
+    <?php
+        $route = '../autorizado.php';
+        include_once('../footer.php');
+    ?>
 </body>
 </html>

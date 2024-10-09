@@ -21,8 +21,12 @@
         <a href="../admin/estadisticas/baratos.php"><button class="button-main-style">Productos más baratos</button></a>
         <a href="../admin/estadisticas/mas_margen.php"><button class="button-main-style">Productos con más margen</button></a>
         <a href="../admin/estadisticas/menos_margen.php"><button class="button-main-style">Productos con menos margen</button></a>
-        <a href="../admin/estadisticas/marcas.php"><button class="button-main-style">Lista de marcas</button></a>
-        <a href="../autorizado.php"><button class="button-main-style">VOLVER</button></a>
+        <a href="../admin/estadisticas/marcas.php"><button class="button-main-style">Lista de marcas</button></a>        
     </main>
+    <br><br>
+    <?php
+        $route = '../autorizado.php';
+        include_once('../footer.php');
+    ?>
 </body>
 </html>

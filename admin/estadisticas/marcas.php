@@ -21,10 +21,10 @@
         <?php
         if(mysqli_num_rows($marcas)>0){
         ?>
-            <table class="mainTable">
+            <table class="table-standard">
                 <thead>
                     <tr>
-                        <td>Marca</td>
+                        <th>Marca</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -45,10 +45,9 @@
         }
         ?>
     </main>
-    <div id="button-volver-container">
-        <a href="../estadisticas.php">
-            <button class="button-main-style">Volver</button>
-        </a>
-    </div>
+    <?php
+        $route = '../estadisticas.php';
+        include_once('../../footer.php')
+    ?>
 </body>
 </html>

@@ -41,10 +41,18 @@
         $action = mysqli_query($conn, $modify_query);
 
         if($action){
-            echo "<script>alert('¡ARTICULO MODIFICADO!')</script>";
+            echo "<script>
+                    alert('¡ARTICULO MODIFICADO!');
+                    window.location.href = 'modificar.php';
+                  </script>";
+            /*header('Location: modificar.php');
+            exit();*/
         }else{
-            echo "<script>alert('ERROR. NO SE PUDO MODIFICAR EL ARTICULO')</script>";
-        }
+            echo "<script>
+                    alert('ERROR. NO SE PUDO MODIFICAR EL ARTICULO');
+                    window.location.href = 'modificar.php';
+                  </script>";
+        }      
     }
 ?>
 
@@ -68,7 +76,7 @@
                 <h2>Cambiar datos del artículo</h2>
                 <div class="form-field">
                     <label for="nombre">Nombre: </label>
-                    <input type="text" name="form-nombre" value="<?php echo $row['nombre']?>">
+                    <input type="text" name="form-nombre" value="<?php if(isset($row)){ echo $row['nombre']; }?>">
                 </div>
                 <div class="form-field">
                     <label for="costo">Costo (s/): </label>
@@ -113,10 +121,9 @@
             </form>
         </div>        
     </main>
-    <footer>
-        <a href="modificar.php">
-            <button type="button" class="button-main-style">VOLVER</button>
-        </a>
-    </footer>
+    <?php
+        $route = 'modificar.php';
+        include_once('../footer.php');
+    ?>
 </body>
 </html>

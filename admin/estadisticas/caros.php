@@ -21,12 +21,12 @@
         <?php
         if(mysqli_num_rows($caros)>0){
         ?>
-            <table class="mainTable">
+            <table class="table-standard">
                 <thead>
                     <tr>
-                        <td>ID</td>
-                        <td>Artículo</td>
-                        <td>Precio</td>
+                        <th>ID</th>
+                        <th>Artículo</th>
+                        <th>Precio</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -49,10 +49,9 @@
         }
         ?>
     </main>
-    <div id="button-volver-container">
-        <a href="../estadisticas.php">
-            <button class="button-main-style">Volver</button>
-        </a>
-    </div>
+    <?php
+        $route = '../estadisticas.php';
+        include_once('../../footer.php')
+    ?>
 </body>
 </html>

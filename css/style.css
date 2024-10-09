@@ -45,7 +45,9 @@ h2 {
     font-size: 40px;
 }
 
-.mainTable {
+.table-standard {
+    margin: 10px 0px;
+    
     font-family: Tahoma, Geneva, sans-serif;
     border: 2px solid #2e303c;
     background-color: #f6f3f3;
@@ -55,24 +57,24 @@ h2 {
     border-collapse: collapse;
 }
 
-.mainTable td, .mainTable th {
+.table-standard td, .table-standard th {
     border: 2px solid #00063D;
     padding: 3px 3px;
 }
 
-.mainTable tbody td {
+.table-standard tbody td {
     font-size: 20px;
     color: black;
 }
 
-.mainTable thead {
+.table-standard thead {
     background: #40afbe;
     border-bottom: green;
 
     border-radius: 10px;
 }
 
-.mainTable thead th {
+.table-standard thead th {
     font-size: 20px;
     font-weight: bold;
     color: #231818;
@@ -195,11 +197,12 @@ tbody tr:nth-child(even) {
 }
 
 .formAutorizado {
+    margin: 0px 20px 0px 8px;
     padding: 20px 10px;
     justify-content: center;
     background-color: rgb(216, 238, 245);
     border-radius: 20px;
-    box-shadow: 10px 10px 5px;
+    box-shadow: 10px 10px 5px gray;
 }
 
 .formAutorizado div {
@@ -209,6 +212,13 @@ tbody tr:nth-child(even) {
 .formAutorizado label {
     font-size: 32px;
     font-family: Tahoma, 'Segoe UI', Geneva, Verdana, sans-serif;
+}
+
+.formAutorizado p {
+    font-size: 42px;
+    font-size: bold;
+    font-family: Tahoma, 'Segoe UI', Geneva, Verdana, sans-serif;
+    margin: 6px 0px 24px 0px;
 }
 
 .formAutorizado input {
@@ -224,7 +234,8 @@ tbody tr:nth-child(even) {
 
 .form-input-button {
     background-color: rgb(15, 111, 15);
-    height: 600px;
+    height: 48px;
+    width: 200px;
     text-align: center;
     border-radius: 16px;
     color: white;
@@ -233,24 +244,39 @@ tbody tr:nth-child(even) {
     font-weight: 600;
     border: none;    
     margin: 10px;
+
+    box-shadow: 8px 8px 5px gray;
 }
 
-.cambiar-button {
+.form-input-button:hover {
+    background-color: rgb(7, 87, 7);
+    cursor: pointer;
+}
+
+.cambiar-button, .detalles-button {
     width: 80px;
     height: 30px;
-    background-color: rgb(107, 199, 199);
+    background-color: rgb(30, 45, 175);
     border: none;
-    border-radius: 10px;
-    color:white;
+    border-radius: 15px;
+    color:rgb(203, 203, 203);
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 14px;
+    box-shadow: 4px 4px 5px gray;
+}
 
-    box-shadow: 4px 4px 5px black;
-
+.detalles-button {
+    color: white;
+    background-color: green;
 }
 
 .cambiar-button:hover {
     background-color: teal;
+    cursor: pointer;
+}
+
+.detalles-button:hover {
+    background-color: rgb(2, 74, 16);
     cursor: pointer;
 }
 
@@ -261,6 +287,6 @@ tbody tr:nth-child(even) {
 }
 
 #stats-button {
-    background-color: darkgray;
+    background-color: rgb(134, 133, 133);
 }
 

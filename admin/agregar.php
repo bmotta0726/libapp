@@ -2,7 +2,7 @@
     require_once('../connection.php');
 
     if (isset($_POST['submit'])){        
-        $nombre =  $_POST['form-nombre'];
+        $nombre =  strtoupper($_POST['form-nombre']);
         $costo = $_POST['form-costo'];
         $precio =  $_POST['form-precio'];
         $unidadVenta = $_POST['form-unidad'];
@@ -93,11 +93,10 @@
                 </div>
             </form>
         </div>        
-    </main>
-    <footer>
-        <a href="../autorizado.php">
-            <button type="button" class="button-main-style">Volver</button>
-        </a>
-    </footer>
+    </main>    
+    <?php 
+        $route = '../autorizado.php';
+        include_once('../footer.php');
+    ?>    
 </body>
 </html>
