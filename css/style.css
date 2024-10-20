@@ -5,12 +5,17 @@
     align-items: center;
 }
 
-.img-container-index {
+.index-image-container {
     display: flex;
     justify-content: center;
 }
 
-.img-container-index img {
+/*.index-image-container img {
+    width: 300px;
+    height: auto;
+}*/
+
+#index-image {
     width: 300px;
     height: auto;
 }
@@ -200,7 +205,7 @@ tbody tr:nth-child(even) {
     margin: 0px 20px 0px 8px;
     padding: 20px 10px;
     justify-content: center;
-    background-color: rgb(216, 238, 245);
+    background-color: rgb(217, 221, 222);
     border-radius: 20px;
     box-shadow: 10px 10px 5px gray;
 }

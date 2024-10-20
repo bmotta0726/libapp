@@ -11,16 +11,19 @@
         <h1>Librería Motta</h1>
         <h2>Bienvenido</h2>
     </header>
-    <div class="img-container-index">
-        <img src="images/logo_big.jpeg" alt="Logo grande">
-    </div>
-    <div class="button-container-index">
-        <a href="consultar.php">
-            <button class="button-main-style button-consultar-index">Consultar</button>
-        </a>
-        <a href="autorizado.php">
-            <button class="button-main-style">Modificar</button>
-        </a>
-    </div>
+    <main>
+        <div class="index-image-container">
+            <img src="images/logo_big.jpeg" alt="Logo grande" id="index-image">
+        </div>
+        <div class="button-container-index">
+            <a href="consultar.php">
+                <button class="button-main-style button-consultar-index">Consultar</button>
+            </a>
+            <a href="autorizado.php">
+                <button class="button-main-style">Modificar</button>
+            </a>
+        </div>
+    </main>    
+    <script src="js/fadein.js"></script>
 </body>
 </html>

@@ -15,8 +15,7 @@
         $article_id = null;
     }
 
-    if (isset($_POST['submit'])){
-        //$submit = $_POST['submit'];
+    if (isset($_POST['submit'])){        
 
         if ($delete_query != ""){
             $delete = mysqli_query($conn, $delete_query);
@@ -27,6 +26,14 @@
         }else{
             echo "<script>alert('ERROR. Producto NO pudo ser eliminado')</script>";
         }
+
+        /** CODE FOR SETTING AUTO_INCREMENT TO MAXIMUM ID VALUE [19-OCT]*/
+
+        $max_id_query = mysqli_query($conn, "SELECT MAX(id) AS max_id FROM articulo");
+        $max_id_value = mysqli_fetch_assoc($max_id_query)['max_id'];
+
+        $set_autoincrement = mysqli_query($conn, "ALTER TABLE articulo AUTO_INCREMENT = " . ($max_id_value + 1));
+
     }
 ?>
 
@@ -46,7 +53,7 @@
     </header><br><br> 
     <div class="search-bar">
         <form method="GET" action="eliminar.php">
-            <!--<input type="text">-->
+            
             <input type="search" name="search" placeholder="Ingrese código del producto">
             <button type="submit" class="search-button">Buscar</button>
             <a href="eliminar.php">
@@ -58,7 +65,7 @@
     <?php
         if ($search_result instanceof mysqli_result){
             if (mysqli_num_rows($search_result)>0){
-        //if ($search_result != 0){
+        
     ?>                        
             <table class="table-standard">
                 <thead>

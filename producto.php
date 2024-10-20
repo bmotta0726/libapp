@@ -45,7 +45,7 @@
     <main>
         <form action="" class="formAutorizado">
             <div>
-                <label for="">Nombre:</label><br>
+                <label for="">Producto:</label><br>
                 <p><?php echo "$nombre"?></p>
             </div>
             <div>
@@ -65,11 +65,11 @@
                 <p for=""><?php echo "$tamano"?></p>
             </div>
             <div>
-                <label for="">Material: -</label><br>
+                <label for="">Material(es): -</label><br>
                 <p><?php echo "$material"?></p>
             </div>
             <div>
-                <label for="">Color: -</label><br>
+                <label for="">Color(es): -</label><br>
                 <p><?php echo "$color"?></p>
             </div>
             <div>
@@ -77,7 +77,7 @@
                 <p><?php echo "$textura"?></p>
             </div>
             <div>
-                <label for="">Diseño: -</label><br>
+                <label for="">Diseño(s): -</label><br>
                 <p><?php echo "$diseno"?></p>
             </div>
         </form>
