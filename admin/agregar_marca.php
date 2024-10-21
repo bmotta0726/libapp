@@ -24,6 +24,7 @@
 <?php 
     $title = "Nueva marca | ";
     $csslocator = "../";
+    $iconlocator = "../";
     include_once('../header.php');
 ?>
 <body>

@@ -12,8 +12,7 @@
             $row = mysqli_fetch_assoc($result);
 
             $idd = $row['id'];
-            $nombre =  $row['nombre'];
-            //$costo = $row['costo'];
+            $nombre =  $row['nombre'];            
             $precio =  $row['precio'];
             $unidadVenta = $row['unidadVenta'];
             $nombreAlt = $row['nombreAlt'];
@@ -22,6 +21,7 @@
             $color = $row['color'];
             $textura = $row['textura'];
             $diseno = $row['diseno'];
+            $nota = $row['comentario'];
         }else{
             echo "<h2>NO SE ENCONTRO ARTICULO</h2>";
         }        
@@ -79,6 +79,10 @@
             <div>
                 <label for="">Diseño(s): -</label><br>
                 <p><?php echo "$diseno"?></p>
+            </div>
+            <div>
+                <label for="">Nota: -</label><br>
+                <p><?php echo "$nota"?></p>
             </div>
         </form>
     </main><br>

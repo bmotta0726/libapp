@@ -33,10 +33,14 @@
         $color = $_POST['form-color'];
         $textura = $_POST['form-textura'];
         $diseno = $_POST['form-diseno'];
+        $comentario = $_POST['form-nota'];
 
-        $modify_query = "UPDATE articulo SET nombre = '$nombre', costo = '$costo', precio = '$precio', 
-        unidadVenta = '$unidadVenta', nombreAlt = '$nombreAlt', size = '$size', material = '$material', 
-        color = '$color', textura = '$textura', diseno = '$diseno' WHERE id = $idd";
+        $modify_query = 
+        "UPDATE articulo 
+        SET nombre = '$nombre', costo = '$costo', precio = '$precio', unidadVenta = '$unidadVenta', 
+        nombreAlt = '$nombreAlt', size = '$size', material = '$material', color = '$color', 
+        textura = '$textura', diseno = '$diseno', comentario = '$comentario' 
+        WHERE id = $idd";
 
         $action = mysqli_query($conn, $modify_query);
 
@@ -44,9 +48,7 @@
             echo "<script>
                     alert('¡ARTICULO MODIFICADO!');
                     window.location.href = 'modificar.php';
-                  </script>";
-            /*header('Location: modificar.php');
-            exit();*/
+                  </script>";            
         }else{
             echo "<script>
                     alert('ERROR. NO SE PUDO MODIFICAR EL ARTICULO');
@@ -59,6 +61,7 @@
 <?php
     $title = 'Modificar | ';
     $csslocator = '../';
+    $iconlocator = '../';
     include_once('../header.php');    
 ?>
 
@@ -113,6 +116,10 @@
                 <div class="form-field">
                     <label for="diseno">Diseño: </label>
                     <input type="text" name="form-diseno" value="<?php echo $row['diseno']?>">
+                </div>
+                <div class="form-field">
+                    <label for="comentario">Nota: </label>
+                    <input type="text" name="form-nota" value="<?php echo $row['comentario']?>" size="200">
                 </div>
                 <br>
                 <div class="form-input-button-container">

@@ -1,6 +1,7 @@
 <?php
     $title = 'Estadísticas | ';
     $csslocator = '../';
+    $iconlocator = '../';
     include_once('../header.php');
 ?>
 

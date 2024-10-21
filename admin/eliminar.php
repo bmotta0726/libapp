@@ -40,6 +40,7 @@
 <?php 
     $title = 'Eliminar artículo | ';
     $csslocator = '../';
+    $iconlocator = '../';
     include_once('../header.php');
 ?>
 

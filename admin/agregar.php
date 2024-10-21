@@ -12,9 +12,10 @@
         $color = $_POST['form-col'];
         $textura = $_POST['form-tex'];
         $diseno = $_POST['form-dis'];
+        $comentario = $_POST['form-nota'];
     
-        $insert_query = "INSERT INTO articulo(nombre, costo, precio, unidadVenta, nombreAlt, size, material, color, textura, diseno) 
-        VALUES ('$nombre', '$costo', '$precio', '$unidadVenta', '$nombreAlt', '$size', '$material', '$color', '$textura', '$diseno')";
+        $insert_query = "INSERT INTO articulo(nombre, costo, precio, unidadVenta, nombreAlt, size, material, color, textura, diseno, comentario) 
+        VALUES ('$nombre', '$costo', '$precio', '$unidadVenta', '$nombreAlt', '$size', '$material', '$color', '$textura', '$diseno', '$comentario')";
 
         $add = mysqli_query($conn, $insert_query);
 
@@ -32,6 +33,7 @@
 <?php 
     $title = "Agregar | ";
     $csslocator = "../";
+    $iconlocator = "../";
     include_once('../header.php');
 ?>
 <body>
@@ -87,6 +89,10 @@
                 <div class="div-form-field">
                     <label for="form-dis">Diseño: </label>
                     <input type="text" id="form-dis" name="form-dis">
+                </div>
+                <div class="div-form-field">
+                    <label for="form-nota">Nota: </label>
+                    <input type="text" id="form-nota" name="form-nota">
                 </div>
                 <div class="form-input-button-container">
                     <input class="form-input-button" type="submit" name="submit" value="Agregar">

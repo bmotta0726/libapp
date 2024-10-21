@@ -18,6 +18,7 @@
 <?php 
     $title = 'Consulta | ';
     $csslocator = '';
+    $iconlocator = '';
     include_once('header.php'); 
 ?>
 <body>
@@ -61,7 +62,7 @@
                         <td><?php echo $row['nombre'] ?></td>
                         <td><?php echo $row['unidadVenta'] ?></td>
                         <td class="td-price"><?php echo $row['precio'] ?></td>
-                        <td><a href="producto.php?id=<?php echo $row['id']?>"><button class="detalles-button">Ver</button></a></td>
+                        <td><a href="producto.php?id=<?php echo $row['id']?>"><button class="intable-button detalles-button">Ver</button></a></td>
                     </tr>
                 <?php
                 }

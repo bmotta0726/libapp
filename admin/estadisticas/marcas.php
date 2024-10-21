@@ -5,17 +5,25 @@
     $marcas = mysqli_query($conn, $query_marcas);
 ?>
 
-<!DOCTYPE html>
+<!--<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../css/style.css">
     <title>Marcas | Librería Motta</title>
-</head>
+</head>-->
+
+<?php 
+    $title = "Lista de marcas | ";
+    $csslocator = "../../";
+    $iconlocator = "../../";
+    include_once('../../header.php');
+?>
+
 <body>
     <header>
-        <h2>MARCAS MÁS COMUNES</h2>
+        <h2>MARCAS REGISTRADAS</h2>
     </header>
     <main>
         <?php

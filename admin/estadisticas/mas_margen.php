@@ -5,14 +5,22 @@
     $margin = mysqli_query($conn, $query_margin);
 ?>
 
-<!DOCTYPE html>
+<!--<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../css/style.css">
     <title>Productos con más margen</title>
-</head>
+</head>-->
+
+<?php 
+    $title = "Productos con más margen | ";
+    $csslocator = "../../";
+    $iconlocator = "../../";
+    include_once('../../header.php');
+?>
+
 <body>
     <header>
         <h2>PRODUCTOS CON MÁS MARGEN</h2>
